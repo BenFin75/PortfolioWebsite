@@ -12,9 +12,19 @@ body,
   .sidebar-icon {
     @apply relative flex items-center justify-center 
     h-16 w-16 mt-2 mb-2 mx-auto  
-  bg-sideBarPrimary hover:bg-sideBarSecondary dark:bg-sideBarPrimary 
+  bg-sideBarPrimary hover:bg-sideBarSecondary
   text-sideBarHover hover:text-sideBarHover
     hover:rounded-xl
+    transition-all duration-300 ease-linear
+    cursor-pointer ;
+  }
+
+  .sidebar-icon.clicked{
+    @apply relative flex items-center justify-center 
+    h-16 w-16 mt-2 mb-2 mx-auto  
+  bg-sideBarSecondary 
+  text-sideBarHover
+    rounded-xl
     transition-all duration-300 ease-linear
     cursor-pointer ;
   }
