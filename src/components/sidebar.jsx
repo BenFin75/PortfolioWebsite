@@ -25,27 +25,7 @@ const Sidebar = ({ setCurrentPage }) => {
     } else {
       buttonClicked = e.target;
     }
-    buttonClicked.classList.add('clicked');
-
-    switch (buttonClicked.id) {
-      case 'Home' :
-        setCurrentPage('home');
-        break;
-      case 'Coding Projects' :
-        setCurrentPage('coding');
-        break;
-      case 'GIS Projects' :
-        setCurrentPage('gis');
-        break;
-      case 'Whats The Weather' :
-        setCurrentPage('weather');
-        break;
-      case 'Resume' :
-        setCurrentPage('resume');
-        break;
-      default :
-        break;
-    }
+    setCurrentPage(buttonClicked.id)
   }
 
   return ( 
@@ -56,11 +36,11 @@ const Sidebar = ({ setCurrentPage }) => {
         <img src={logo} alt="" />
       </div>
       <div className="flex flex-col">
-        <SidebarIcon icon={home} pageName="Home" changePage={changePage}/>
-        <SidebarIcon icon={projects} pageName="Coding Projects" changePage={changePage} />
-        <SidebarIcon icon={gis} pageName="GIS Projects" changePage={changePage} />
-        <SidebarIcon icon={weather} pageName="Whats The Weather" changePage={changePage} />
-        <SidebarIcon icon={resume} pageName="Resume" changePage={changePage} />
+        <SidebarIcon icon={home} pageName="home" changePage={changePage}/>
+        <SidebarIcon icon={projects} pageName="coding" changePage={changePage} />
+        <SidebarIcon icon={gis} pageName="gis" changePage={changePage} />
+        <SidebarIcon icon={weather} pageName="weather" changePage={changePage} />
+        <SidebarIcon icon={resume} pageName="resume" changePage={changePage} />
       </div>
       <div className="links">
       <SidebarLink icon={github} link="https://github.com/benfin75" />
