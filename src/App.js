@@ -3,6 +3,7 @@ import {useState} from 'react';
 import Sidebar from './components/sidebar';
 import Home from './components/Home';
 import Coding from './components/Coding';
+import Weather from './components/weather';
 
 function App() {
 
@@ -13,6 +14,7 @@ function App() {
       <div className="main ml-36 bg-teal-600 flex flex-1 min-h-screen">
         {currentPage === 'home' && <Home />}
         {currentPage === 'coding' && <Coding />}
+        {currentPage === 'weather' && <Weather />}
       </div>
     </div>
   );
