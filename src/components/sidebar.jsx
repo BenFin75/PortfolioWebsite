@@ -1,6 +1,7 @@
 import { MdOutlineContactMail, MdOutlineListAlt, MdOutlineFolderShared } from "react-icons/md";
 import { WiDayRainMix } from "react-icons/wi";
 import { BsGlobe2, BsLinkedin, BsGithub } from "react-icons/bs";
+import logo from "../img/logo1.svg"
 
 const home = <MdOutlineListAlt size="40"/>;
 const projects = <MdOutlineFolderShared size="40"/>;
@@ -49,16 +50,19 @@ const Sidebar = ({ setCurrentPage }) => {
 
   return ( 
     <div className="fixed top-0 left-0 h-screen w-36 m-0
-                    flex flex-col items-center
+                    flex flex-col items-center justify-between
                       bg-sideBarPrimary shadow-lg">
-      <div className="contents">
+      <div className="logo">
+        <img src={logo} alt="" />
+      </div>
+      <div className="flex flex-col">
         <SidebarIcon icon={home} pageName="Home" changePage={changePage}/>
         <SidebarIcon icon={projects} pageName="Coding Projects" changePage={changePage} />
         <SidebarIcon icon={gis} pageName="GIS Projects" changePage={changePage} />
         <SidebarIcon icon={weather} pageName="Whats The Weather" changePage={changePage} />
         <SidebarIcon icon={resume} pageName="Resume" changePage={changePage} />
       </div>
-      <div className="links mt-auto">
+      <div className="links">
       <SidebarLink icon={github} link="https://github.com/benfin75" />
       <SidebarLink icon={linkedin} link="https://linkedin.com/in/benfin75" />
       </div>
