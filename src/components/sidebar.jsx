@@ -1,3 +1,4 @@
+import { useEffect } from "react"
 import { MdOutlineContactMail, MdOutlineListAlt, MdOutlineFolderShared } from "react-icons/md";
 import { WiDayRainMix } from "react-icons/wi";
 import { BsGlobe2, BsLinkedin, BsGithub } from "react-icons/bs";
@@ -11,10 +12,18 @@ const resume = <MdOutlineContactMail size="40"/>;
 const linkedin = <BsLinkedin size="40"/>;
 const github = <BsGithub size="40"/>;
 
-const Sidebar = ({ setCurrentPage }) => {
+const Sidebar = ({ currentPage, setCurrentPage }) => {
 
-  const changePage = (e) => {
+  useEffect(() => {
     document.querySelectorAll('.sidebar-icon').forEach(button => button.classList.remove('clicked'));
+    console.log(currentPage)
+    let currentPageButton = document.querySelector('#' + currentPage)
+    if (currentPageButton) {
+      currentPageButton.classList.add('clicked')
+    }
+  }, [currentPage]) 
+  
+  const changePage = (e) => {
     let buttonClicked;
     if (e.target.tagName !== 'DIV') {
       if (e.target.tagName !== 'svg') {

@@ -9,7 +9,7 @@ function App() {
   const [currentPage, setCurrentPage] = useState('home')
   return (
     <div className="App flex">
-      <Sidebar setCurrentPage={setCurrentPage} />
+      <Sidebar currentPage={currentPage} setCurrentPage={setCurrentPage} />
       <div className="main ml-36 bg-teal-600 flex flex-1 min-h-screen">
         {currentPage === 'home' && <Home />}
         {currentPage === 'coding' && <Coding />}
