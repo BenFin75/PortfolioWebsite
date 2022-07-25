@@ -22,7 +22,7 @@ const Sidebar = ({ currentPage, setCurrentPage }) => {
       currentPageButton.classList.add('clicked')
     }
   }, [currentPage]) 
-  
+
   const changePage = (e) => {
     let buttonClicked;
     if (e.target.tagName !== 'DIV') {
@@ -45,11 +45,11 @@ const Sidebar = ({ currentPage, setCurrentPage }) => {
         <img src={logo} alt="" />
       </div>
       <div className="flex flex-col">
-        <SidebarIcon icon={home} pageName="home" changePage={changePage}/>
-        <SidebarIcon icon={projects} pageName="coding" changePage={changePage} />
-        <SidebarIcon icon={gis} pageName="gis" changePage={changePage} />
-        <SidebarIcon icon={weather} pageName="weather" changePage={changePage} />
-        <SidebarIcon icon={resume} pageName="resume" changePage={changePage} />
+        <SidebarIcon icon={home} id="home" pageName="Home" changePage={changePage}/>
+        <SidebarIcon icon={projects} id="coding" pageName="Coding Projects" changePage={changePage} />
+        <SidebarIcon icon={gis} id="gis" pageName="GIS Projects" changePage={changePage} />
+        <SidebarIcon icon={weather} id="weather" pageName="Whats the Weather?" changePage={changePage} />
+        <SidebarIcon icon={resume} id="resume" pageName="Resume" changePage={changePage} />
       </div>
       <div className="links">
       <SidebarLink icon={github} link="https://github.com/benfin75" />
@@ -59,9 +59,9 @@ const Sidebar = ({ currentPage, setCurrentPage }) => {
    );
 }
 
-const SidebarIcon = ({ icon, pageName, changePage }) => {
+const SidebarIcon = ({ icon, id, pageName, changePage }) => {
   return (
-    <div className="sidebar-icon group" id={pageName} onClick={(pageName) => changePage(pageName)}>
+    <div className="sidebar-icon group" id={id} onClick={(pageName) => changePage(pageName)}>
       { icon }
 
       <span className="sidebar-page-name group-hover:scale-100">
