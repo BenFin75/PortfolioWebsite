@@ -1,16 +1,18 @@
 const Home = () => {
   return ( 
-    <div className="home bg-mainPrimary flex-1 flex p-[8vw]">
-      <div className="divider w-1 h-[50%]  bg-mainSecondary mr-3"></div>
+    <div className="home bg-mainPrimary flex-1 flex items-center pl-2 md:p-[8vw] justify-center">
+      <div className="divider w-[3px] h-[75%] mt-6  bg-mainSecondary mr-3 flex-shrink-0 hidden md:flex lg:flex"></div>
       <div className="main-content flex flex-col">
-        <div className="name">
+        <div className="name place-self-start text-6xl font-medium mb-4 text-mainSecondary">
           Hi, I'm Ben Finley!
         </div>
-        <div className="divider h-1 w-5 justify-self-center bg-mainSecondary"></div>
-        <div className="intro flex-1 flex mt-4">
-          <div className="text-area">
-            <div className="intro-blurb text-mainSecondary">
-            I am a web developer with experience from The Odin Project. I am passionate about creating engaging and intuitive web designs which engage users, and  tell a story
+        <div className="divider h-[3px] w-[75%] ml-[8rem] bg-mainSecondary hidden md:hidden lg:flex"></div>
+        <div className="intro flex-1 flex mt-4 flex-col-reverse md:flex-row pb-6">
+          <div className="text-area flex max-w-[50rem] md:pr-10 lg:pr-20 justify-center align-middle">
+            <div className="intro-blurb flex items-center text-mainSecondary md:text-2xl lg:text-4xl">
+              <span className="text-left">
+              I am a web developer with experience from The Odin Project. I am passionate about creating unique and intuitive web designs which engage users, and  tell a story
+              </span>
             </div>
           </div>
           <div className="headshot">
