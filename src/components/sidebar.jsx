@@ -46,8 +46,8 @@ const Sidebar = ({ currentPage, setCurrentPage }) => {
       </div>
       <div className="flex flex-col">
         <SidebarIcon icon={home} id="home" pageName="Home" changePage={changePage}/>
-        <SidebarIcon icon={projects} id="coding" pageName="Coding Projects" changePage={changePage} />
-        <SidebarIcon icon={gis} id="gis" pageName="GIS Projects" changePage={changePage} />
+        {/* <SidebarIcon icon={projects} id="coding" pageName="Coding Projects" changePage={changePage} />
+        <SidebarIcon icon={gis} id="gis" pageName="GIS Projects" changePage={changePage} /> */}
         <SidebarIcon icon={weather} id="weather" pageName="Whats the Weather?" changePage={changePage} />
         <SidebarIcon icon={resume} id="resume" pageName="Resume" changePage={changePage} />
       </div>
