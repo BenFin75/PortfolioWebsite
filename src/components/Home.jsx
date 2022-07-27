@@ -3,7 +3,7 @@ import lava from '../img/lava.png'
 
 const Home = () => {
   return ( 
-    <div className="home bg-mainPrimary flex-1 flex items-center pl-2 md:px-[8vw] justify-center">
+    <div className="home bg-mainPrimary flex-1 flex items-center pl-2 pt-8 md:pt-8 md:px-[8vw] justify-center">
       <div className="divider w-[3px] h-[50%] mt-6  bg-mainSecondary mr-3 flex-shrink-0 hidden md:flex lg:flex"></div>
       <div className="main-content flex flex-col">
         <div className="name place-self-start text-6xl font-semibold mb-4 text-mainSecondary">

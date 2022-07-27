@@ -12,7 +12,7 @@ function App() {
   return (
     <div className="App flex">
       <Sidebar currentPage={currentPage} setCurrentPage={setCurrentPage} />
-      <div className="main ml-36 bg-teal-600 flex flex-1 min-h-screen">
+      <div className="main mt-24 md:mt-0 md:ml-36 bg-teal-600 flex flex-1 min-h-screen">
         {currentPage === 'home' && <Home />}
         {currentPage === 'coding' && <Coding />}
         {currentPage === 'resume' && <Resume />}
