@@ -2,7 +2,7 @@ import { useEffect } from "react"
 import { MdOutlineContactMail, MdOutlineListAlt, MdOutlineFolderShared } from "react-icons/md";
 import { WiDayRainMix } from "react-icons/wi";
 import { BsGlobe2, BsLinkedin, BsGithub } from "react-icons/bs";
-import logo from "../img/logo1.svg"
+import logo from "../img/logo1.svg";
 
 const home = <MdOutlineListAlt size="40"/>;
 const projects = <MdOutlineFolderShared size="40"/>;
