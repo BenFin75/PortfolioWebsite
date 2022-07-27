@@ -31,8 +31,8 @@ const Home = () => {
             />
           </div>
           <div className="text-area flex flex-col max-w-[50rem] md:pl-10 lg:pl-18 align-middle">
-            <div className="text-center text-mainSecondary font-bold md:text-2xl lg:text-3xl">
-              I am passionate about the world around me.
+            <div className="text-left text-mainSecondary font-bold md:text-2xl lg:text-3xl">
+              I'm passionate about the world around me
             </div>
             <div className="edu-blurbbintro-blur flex flex-1 items-center text-mainSecondary md:text-2xl lg:text-4xl">
             <span className="text-left">
